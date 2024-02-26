@@ -1,0 +1,41 @@
+% https://texblog.org/2013/02/13/latex-documentclass-options-illustrated/
+\documentclass[a4paper,12pt,draft,onecolumn,twoside,openright,notitlepage]{book}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[italian]{babel}
+
+% Margini, presi da 
+\usepackage[left=3.5cm,right=2.5cm,top=3cm,bottom=2cm]{geometry}
+
+% Times New Roman
+\usepackage{times}
+
+% Abilita il supporto alle immagini
+\usepackage{graphicx}
+%Path relative to the main .tex file 
+\graphicspath{ {./images/} }
+
+% Mette i counter della pagina con sezione e sottolineatura
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% Li toglie nelle pagine vuote
+\usepackage{emptypage}
+
+\begin{document}
+
+
+\input{chapters/titlepage}
+
+\input{chapters/dedica}
+
+\input{chapters/acks}
+
+\tableofcontents
+
+\input{chapters/01}
+
+\input{chapters/appendix}
+
+\end{document}
