@@ -1,3 +1,6 @@
+permissions:
+  contents: write
+
 name: Build LaTeX document
 on: [push]
 jobs:
@@ -8,6 +11,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           root_file: main.tex
       - name: Upload PDF file
