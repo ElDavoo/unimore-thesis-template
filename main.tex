@@ -1,12 +1,12 @@
 % https://texblog.org/2013/02/13/latex-documentclass-options-illustrated/
 \documentclass[a4paper,12pt,draft,onecolumn,twoside,openright,notitlepage]{book}
 
-\usepackage[italian]{babel}
+\usepackage[italian,english]{babel}
 
 % Margini, presi da 
 \usepackage[left=3.5cm,right=2.5cm,top=3cm,bottom=2cm]{geometry}
 
-% Times New Roman, font consigliato
+% Times New Roman
 \usepackage{times}
 
 % Abilita il supporto alle immagini
@@ -28,14 +28,23 @@
 
 \input{chapters/dedica}
 
-\input{chapters/abstract}
+\input{chapters/abstract_it}
 
-\input{chapters/acks}
+\input{chapters/abstract}
 
 \tableofcontents
 
 \input{chapters/01}
 
+\input{chapters/02}
+
+\input{chapters/03}
+
+\input{chapters/04}
+
+
 \input{chapters/appendix}
+
+\input{chapters/acks}
 
 \end{document}
