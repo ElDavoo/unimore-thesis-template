@@ -103,6 +103,8 @@ backgroundcolor=\color{light-gray}
 
 \begin{document}
 
+% Disattiva la numerazione
+\pagenumbering{gobble}
 
 \input{chapters/titlepage}
 
@@ -113,9 +115,12 @@ backgroundcolor=\color{light-gray}
 \input{chapters/abstract}
 
 \pagestyle{frontmatter}
+% Resetta e imposta la numerazione a caratteri romani
 \frontmatter
+
 \tableofcontents
 
+% Resetta e imposta la numerazione a numeri arabi
 \mainmatter
 \pagestyle{mainmatter}
 
