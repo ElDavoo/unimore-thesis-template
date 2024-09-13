@@ -104,6 +104,20 @@ backgroundcolor=\color{light-gray}
 \usepackage{enumitem}
 \setlist[enumerate]{itemsep = -1 mm}
 
+%Consente di usare \code al posto di \texttt 
+\newcommand{\code}{\texttt}
+
+%Glossario
+\usepackage[acronym,toc]{glossaries}
+\makeglossaries
+
+%Usalo per aggiungere un capitolo al TOC senza numerarlo
+\newcommand*{\nchapter}[1]{
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}
+}
+
+
 \begin{document}
 
 % Disattiva la numerazione
@@ -111,11 +125,11 @@ backgroundcolor=\color{light-gray}
 
 \input{chapters/titlepage}
 
-\input{chapters/dedica}
+\include{chapters/dedica}
 
-\input{chapters/abstract_it}
+\include{chapters/abstract_it}
 
-\input{chapters/abstract}
+\include{chapters/abstract}
 
 \pagestyle{frontmatter}
 % Resetta e imposta la numerazione a caratteri romani
@@ -127,21 +141,23 @@ backgroundcolor=\color{light-gray}
 \mainmatter
 \pagestyle{mainmatter}
 
-\input{chapters/01}
+\include{chapters/01}
 
-\input{chapters/02}
+\include{chapters/02}
 
-\input{chapters/03}
+\include{chapters/03}
 
-\input{chapters/04}
+\include{chapters/04}
 
 \begin{flushleft}
 \bibliographystyle{plain}
 \bibliography{references}{}
 \end{flushleft}
 
-\input{chapters/appendix}
+\include{chapters/appendix}
 
-\input{chapters/acks}
+\include{glossary}
+
+\include{chapters/acks}
 
 \end{document}
