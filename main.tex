@@ -130,6 +130,8 @@ backgroundcolor=\color{light-gray}
 	pdfauthor={Autore},
 }
 
+\usepackage{frontespizio}
+
 \begin{document}
 
 % Disattiva la numerazione
@@ -137,7 +139,12 @@ backgroundcolor=\color{light-gray}
 
 \include{glossary}
 
-\include{chapters/titlepage}
+% Scegli se usare il frontespizio scritto "a mano"
+% o generato automaticamente
+% NOTA: In draft mode, il frontespizio NON viene generato.
+% \include{chapters/titlepage}
+
+\include{chapters/frontespizio}
 
 \include{chapters/dedica}
 

@@ -18,3 +18,5 @@
 *.gls
 *.ist
 *.glsdefs
+*.out
+*-frn.tex
