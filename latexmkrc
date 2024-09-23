@@ -21,6 +21,7 @@ sub run_makeglossaries {
     };
     return $return;
 }
-
-add_cus_dep( "tex", "pdf", 0, "frn2pdf" );
-sub frn2pdf { return system( "latexmk -pdf $_[0]" ); }
+if ( !-e main-frn.tex ) {
+    system("pdflatex -interaction=nonstopmode main.tex");
+}
+system("pdflatex -interaction=nonstopmode main-frn.tex");

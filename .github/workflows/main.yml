@@ -8,14 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           root_file: main.tex
+      - name: Upload main.pdf as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: main
+          path: main.pdf
       - name: Upload PDF file
-        uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
         with:
           files: main.pdf
