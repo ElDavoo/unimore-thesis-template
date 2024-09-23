@@ -57,8 +57,6 @@
 % Dà un po' di spazio in più alle parole in caso non ci entrino nella riga
 \setlength{\emergencystretch}{4em}
 
-% Supporto ai line break negli URL
-\usepackage{xurl}
 
 % environment for bash code
 \usepackage{listings}
@@ -117,6 +115,20 @@ backgroundcolor=\color{light-gray}
     \addcontentsline{toc}{chapter}{#1}
 }
 
+% Supporto ai line break negli URL
+\usepackage{xurl}
+
+% Rende cliccabili i link
+% (Overleaf dice che questo è l'ultimo pacchetto da caricare)
+% NOTA: I link sono disattivati se il documento è in draft!
+\usepackage{hyperref}
+
+\hypersetup{
+	pdfpagemode=FullScreen,
+	% FIXME Deduplicare questi due dati
+	pdftitle={Titolo tesi},
+	pdfauthor={Autore},
+}
 
 \begin{document}
 
