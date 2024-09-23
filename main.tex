@@ -123,7 +123,9 @@ backgroundcolor=\color{light-gray}
 % Disattiva la numerazione
 \pagenumbering{gobble}
 
-\input{chapters/titlepage}
+\include{glossary}
+
+\include{chapters/titlepage}
 
 \include{chapters/dedica}
 
@@ -156,7 +158,9 @@ backgroundcolor=\color{light-gray}
 
 \include{chapters/appendix}
 
-\include{glossary}
+\printglossary[type=\acronymtype]
+\printglossary
+\newpage
 
 \include{chapters/acks}
 
