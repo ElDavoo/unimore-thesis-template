@@ -20,3 +20,5 @@
 *.glsdefs
 *.out
 *-frn.tex
+*.bcf
+*.run.xml

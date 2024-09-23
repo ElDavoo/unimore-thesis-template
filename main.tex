@@ -1,6 +1,7 @@
 % https://texblog.org/2013/02/13/latex-documentclass-options-illustrated/
-\documentclass[a4paper,12pt,draft,onecolumn,twoside,openright,notitlepage]{book}
+\documentclass[a4paper,12pt,onecolumn,twoside,openright,notitlepage]{book}
 
+% NOTA: La lingua principale è l'ULTIMA!
 \usepackage[italian,english]{babel}
 
 % Margini, presi dal template CRIS
@@ -8,6 +9,10 @@
 
 % Times New Roman
 \usepackage{times}
+
+\usepackage{csquotes}
+\usepackage[style=numeric]{biblatex}
+\addbibresource{references.bib}
 
 % Abilita il supporto alle immagini
 \usepackage{graphicx}
@@ -171,8 +176,7 @@ backgroundcolor=\color{light-gray}
 \include{chapters/04}
 
 \begin{flushleft}
-\bibliographystyle{plain}
-\bibliography{references}{}
+\printbibliography
 \end{flushleft}
 
 \include{chapters/appendix}
