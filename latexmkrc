@@ -21,7 +21,8 @@ sub run_makeglossaries {
     };
     return $return;
 }
-if ( !-e main-frn.tex ) {
+if ( !-e "main-frn.tex" ) {
+    system("echo Compiling front page");
     system("pdflatex -interaction=nonstopmode main.tex");
-    system("pdflatex -interaction=nonstopmode main-frn.tex");
 }
+system("pdflatex -interaction=nonstopmode main-frn.tex");
