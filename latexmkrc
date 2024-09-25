@@ -23,5 +23,5 @@ sub run_makeglossaries {
 }
 if ( !-e main-frn.tex ) {
     system("pdflatex -interaction=nonstopmode main.tex");
+    system("pdflatex -interaction=nonstopmode main-frn.tex");
 }
-system("pdflatex -interaction=nonstopmode main-frn.tex");
