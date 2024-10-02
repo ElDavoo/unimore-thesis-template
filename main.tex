@@ -125,6 +125,16 @@ backgroundcolor=\color{light-gray}
     \addcontentsline{toc}{chapter}{#1}
 }
 
+\usepackage{tikz}
+% Opzioni predefinite
+\tikzset{every picture/.style={very thick, rounded corners=0.1mm}}
+
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+\usepackage{bytefield}
+
 % Supporto ai line break negli URL
 \usepackage{xurl}
 
@@ -134,6 +144,10 @@ backgroundcolor=\color{light-gray}
 \usepackage{hyperref}
 
 \hypersetup{
+	colorlinks=true,
+    linkcolor={blue!10!black},
+    citecolor={blue!10!black},
+    urlcolor={blue!10!black},
 	pdfpagemode=FullScreen,
 	% FIXME Deduplicare questi due dati
 	pdftitle={Titolo tesi},
